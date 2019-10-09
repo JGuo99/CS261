@@ -1,0 +1,14 @@
+First:
+	Create long int called b1 and b2. We want to shift x right (15 - n) four times and mask it with &0xF.
+	We do 15 - n becuase there are 15 positions in hexadecimal and masking with 0xF is the same reason.
+	We do it four times is becuase there are for bits in nibble.
+
+	We then created another variable long int b and then we xor b1 and b2 together. This will create a
+	merged nibble and finds the positions we want to swap.
+
+Second:
+	We apply left shift four times to b. Then or both n and m. This will put positions we found back to
+	their place.
+
+Third:
+	We will now xor x and b together to keep the position we want to swap and not change other bits.
